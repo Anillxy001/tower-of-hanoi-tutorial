@@ -8,7 +8,7 @@ import org.andengine.opengl.vbo.VertexBufferObjectManager;
 
 public class Ring extends Sprite {
 	private int mWeight;
-	private Stack mStack; //this represents the stack that this ring belongs to
+	private Stack<Ring> mStack; //this represents the stack that this ring belongs to
     private Sprite mTower;
  
     public Ring(int weight, float pX, float pY, ITextureRegion pTextureRegion, VertexBufferObjectManager pVertexBufferObjectManager) {
@@ -20,11 +20,11 @@ public class Ring extends Sprite {
         return mWeight;
     }
  
-    public Stack getmStack() {
+    public Stack<Ring> getmStack() {
         return mStack;
     }
  
-    public void setmStack(Stack mStack) {
+    public void setmStack(Stack<Ring> mStack) {
         this.mStack = mStack;
     }
  
